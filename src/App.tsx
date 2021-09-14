@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Home from './pages/Home';
+import HomeBackup from './pages/HomeBackup';
 
 import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Toolbar, Typography, Button, IconButton, Container } from '@material-ui/core';
@@ -13,6 +13,10 @@ import {
   Link
 } from 'react-router-dom';
 import Agenda from './pages/Agenda';
+import Test from './pages/Test';
+import Materi from './pages/Materi';
+import Home from './pages/Home';
+import Dokumentasi from './pages/Dokumentasi';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -104,10 +108,10 @@ function App() {
             <Agenda />
           </Route>
           <Route path="/materi">
-            <Users />
+            <Materi />
           </Route>
           <Route path="/dokumentasi">
-            <Users />
+            <Dokumentasi />
           </Route>
           <Route path="/">
             <Home />
@@ -125,11 +129,11 @@ const Footer = () => {
   const classes = useStyles();
   return (
       <footer className={classes.footer}>
-          <Typography variant="h6" align="center" gutterBottom>
-              Bimtek Pengelola Database TA 2020
+          <Typography variant="body1" align="center" gutterBottom>
+              Bimtek Pengelola Database 2021
           </Typography>
-          <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-              Developed by: @mahisaajy
+          <Typography variant="body2" align="center" color="textSecondary" component="p">
+              Developed by: <a href='https://github.com/mahisaajy' target={"_blank"}>@mahisaajy</a>
           </Typography>
           {/* <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
             Something here to give the footer a purpose!

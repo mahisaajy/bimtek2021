@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createTheme, ThemeProvider } from '@material-ui/core';
-import { deepPurple, orange, teal, yellow } from '@material-ui/core/colors';
+import { deepPurple, orange, pink, red, teal, yellow } from '@material-ui/core/colors';
 
 // TODO: Kenapa typescript harus ada declare module ini
 declare module '@material-ui/core/styles/createTheme' {
@@ -23,26 +23,26 @@ declare module '@material-ui/core/styles/createTheme' {
 
 const theme = createTheme({
   palette: {
-    primary: teal,
+    primary: pink,
   },
-  typography: {
-    fontFamily: [
-      '"Google Sans"',
-      'Arial',
-      'Helvetica',
-      'sans-serif',
-      // '-apple-system',
-      // 'BlinkMacSystemFont',
-      // '"Segoe UI"',
-      // 'Roboto',
-      // '"Helvetica Neue"',
-      // 'Arial',
-      // 'sans-serif',
-      // '"Apple Color Emoji"',
-      // '"Segoe UI Emoji"',
-      // '"Segoe UI Symbol"',
-    ].join(','),
-  },
+  // typography: {
+  //   fontFamily: [
+  //     '"Google Sans"',
+  //     'Arial',
+  //     'Helvetica',
+  //     'sans-serif',
+  //     // '-apple-system',
+  //     // 'BlinkMacSystemFont',
+  //     // '"Segoe UI"',
+  //     // 'Roboto',
+  //     // '"Helvetica Neue"',
+  //     // 'Arial',
+  //     // 'sans-serif',
+  //     // '"Apple Color Emoji"',
+  //     // '"Segoe UI Emoji"',
+  //     // '"Segoe UI Symbol"',
+  //   ].join(','),
+  // },
 });
 
 ReactDOM.render(
