@@ -11,8 +11,9 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link'
-
+import imgFront from '../assets/front.jpeg';
 import { Link as RouterLink } from 'react-router-dom'
+import { Divider } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
         // textDecoration: 'none'
     },
     container: {
-        paddingTop: theme.spacing(4),
+        padding: theme.spacing(8),
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -78,7 +79,8 @@ function CustomCard({ title, description, imagemedia, linkto }: CustomCardProps)
                     <CardMedia
                         className={classes.media}
                         //image="https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
-                        image={require('../assets/' + imagemedia)}
+                        //image={require('../assets/' + imagemedia)}
+                        image={imgFront}
                         title="Contemplative Reptile"
                     />
                     <CardContent>
@@ -109,18 +111,43 @@ export default function Home() {
     return (
         <>
 
-            <Container className={classes.container} maxWidth="sm">
+
+            <Container maxWidth="lg">
+                <Grid container spacing={3} alignItems="center">
+                    <Grid item xs={12} md={6}>
+                        <Typography variant="h4" component="h1">
+                            Bimbingan Teknis Pusat Database
+                        </Typography>
+                        <Typography variant="h6"  color="textSecondary">
+                            Pengelola Data Handal
+                        </Typography>
+                        <Typography variant="h6" color="textSecondary" paragraph>
+                            untuk Informasi MKG Terpercaya
+                        </Typography>
+                        <Button variant="contained" color="primary">
+                            Lihat Agenda
+                        </Button>
+                    </Grid>
+                    <Grid item xs={12} md={6} alignItems={'flex-start'}>
+                        <img src={imgFront}></img>
+                    </Grid>
+                </Grid>
+
+            </Container>
+
+            {/* <Container className={classes.container} maxWidth="sm">
                 <Typography component="h1" variant="h4" align="center" color="textPrimary" gutterBottom>
                     Bimtek Database
-                </Typography>
-                {/* <Typography variant="subtitle1" color="textSecondary" align="center">Belum ada materi yang diunggah</Typography> */}
+                </Typography>                
             </Container>
 
             <Container maxWidth="md">
                 <Typography variant="h5" align="center" color="textSecondary" paragraph>
                     Pengelola Data Handal untuk Informasi MKG Terpercaya
                 </Typography>
-            </Container>
+            </Container> */}
+
+            <Divider />
             <Container className={classes.container} maxWidth="lg">
                 {/* <Typography>
         Pilihan Menu

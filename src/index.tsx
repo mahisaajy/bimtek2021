@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createTheme, ThemeProvider } from '@material-ui/core';
-import { deepPurple, orange, pink, red, teal, yellow } from '@material-ui/core/colors';
+import { blue, deepPurple, orange, pink, red, teal, yellow } from '@material-ui/core/colors';
 
 // TODO: Kenapa typescript harus ada declare module ini
 declare module '@material-ui/core/styles/createTheme' {
@@ -23,7 +23,10 @@ declare module '@material-ui/core/styles/createTheme' {
 
 const theme = createTheme({
   palette: {
-    primary: pink,
+    // primary: blue,
+    primary: {
+      main: '#1565c0',
+    }
   },
   // typography: {
   //   fontFamily: [
