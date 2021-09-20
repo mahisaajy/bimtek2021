@@ -4,8 +4,14 @@ import './App.css';
 import HomeBackup from './pages/HomeBackup';
 
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar, Typography, Button, IconButton, Container } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Button, IconButton, Container, Hidden, SwipeableDrawer, List, Box, ListItem, ListItemIcon, ListItemText, Divider } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import MailIcon from '@material-ui/icons/Mail';
+import HomeIcon from '@material-ui/icons/Home';
+import EventNoteIcon from '@material-ui/icons/EventNote';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
+import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import {
   BrowserRouter as Router,
   Switch,
@@ -35,57 +41,139 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     //backgroundColor: theme.palette.background.paper,
     backgroundColor: //'#1565c0',
-        theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[800],
+      theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[800],
     marginTop: 'auto',
     padding: theme.spacing(6),
-},
+  },
 }));
+
+type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
 function App() {
   const classes = useStyles();
 
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+
+  const direction = 'left';
+
+  const toggleDrawer =
+    (anchor: Anchor, open: boolean) =>
+      (event: React.KeyboardEvent | React.MouseEvent) => {
+        if (
+          event &&
+          event.type === 'keydown' &&
+          ((event as React.KeyboardEvent).key === 'Tab' ||
+            (event as React.KeyboardEvent).key === 'Shift')
+        ) {
+          return;
+        }
+
+        setState({ ...state, [anchor]: open });
+      };
+
+
+  const list = (anchor: Anchor) => (
+    <Box
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        <ListItem button key={'beranda'} component={Link} to={'/'}>
+          <ListItemIcon>
+            <HomeIcon />
+          </ListItemIcon>
+          <ListItemText primary={'Beranda'} />
+        </ListItem>
+        <ListItem button key={'agenda'} component={Link} to={'/agenda'}>
+          <ListItemIcon>
+            <EventNoteIcon />
+          </ListItemIcon>
+          <ListItemText primary={'Agenda'} />
+        </ListItem>
+        <ListItem button key={'materi'} component={Link} to={'/materi'}>
+          <ListItemIcon>
+            <MenuBookIcon />
+          </ListItemIcon>
+          <ListItemText primary={'Materi'} />
+        </ListItem>
+        <ListItem button key={'dokumentasi'} component={Link} to={'/dokumentasi'}>
+          <ListItemIcon>
+            <PhotoLibraryIcon />
+          </ListItemIcon>
+          <ListItemText primary={'Dokumentasi'} />
+        </ListItem>        
+      </List>      
+    </Box>
+  );
+
+
   return (
     <div className={classes.root}>
       <Router>
-        <AppBar position="static"
+        <AppBar position="sticky"
         //</div>style={{ background: 'white', color: '#5F6368' }}
         >
           <Container maxWidth="lg">
             <Toolbar>
-              {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton> */}
+              <Hidden smUp>
+                {/* {(['left', 'right', 'top', 'bottom'] as const).map((anchor) => ( */}
+                <React.Fragment key={direction}>
+                  <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                    <MenuIcon onClick={toggleDrawer(direction, true)} />
+                  </IconButton>
+                  {/* <Button onClick={toggleDrawer(direction, true)}>{direction}</Button> */}
+                  <SwipeableDrawer
+                    anchor={direction}
+                    open={state[direction]}
+                    onClose={toggleDrawer(direction, false)}
+                    onOpen={toggleDrawer(direction, true)}
+                  >
+                    {list(direction)}
+                  </SwipeableDrawer>
+                </React.Fragment>
+                {/* ))} */}
+              </Hidden>
               <Typography variant="h6" className={classes.title}>
                 Bimtek Database 2021
               </Typography>
-              <Button
-                component={Link}
-                to={'/'}
-                color="inherit"
-              >
-                Beranda
-              </Button>
-              <Button
-                component={Link}
-                to={'/agenda'}
-                color="inherit"
-              >
-                Agenda
-              </Button>
-              <Button
-                component={Link}
-                to={'/materi'}
-                color="inherit"
-              >
-                Materi
-              </Button>
-              <Button
-                component={Link}
-                to={'/dokumentasi'}
-                color="inherit"
-              >
-                Dokumentasi
-              </Button>
+              <Hidden only="xs">
+                <Button
+                  component={Link}
+                  to={'/'}
+                  color="inherit"
+                >
+                  Beranda
+                </Button>
+                <Button
+                  component={Link}
+                  to={'/agenda'}
+                  color="inherit"
+                >
+                  Agenda
+                </Button>
+                <Button
+                  component={Link}
+                  to={'/materi'}
+                  color="inherit"
+                >
+                  Materi
+                </Button>
+                <Button
+                  component={Link}
+                  to={'/dokumentasi'}
+                  color="inherit"
+                >
+                  Dokumentasi
+                </Button>
+              </Hidden>
+
             </Toolbar>
           </Container>
         </AppBar>
@@ -128,18 +216,18 @@ function App() {
 const Footer = () => {
   const classes = useStyles();
   return (
-      <footer className={classes.footer}>
-          <Typography variant="body1" align="center" gutterBottom>
-              Bimtek Pengelola Database 2021
-          </Typography>
-          <Typography variant="body2" align="center" color="textSecondary" component="p">
-              Developed by: <a href='https://github.com/mahisaajy' target={"_blank"}>@mahisaajy</a>
-          </Typography>
-          {/* <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+    <footer className={classes.footer}>
+      <Typography variant="body1" align="center" gutterBottom>
+        Bimtek Pengelola Database 2021
+      </Typography>
+      <Typography variant="body2" align="center" color="textSecondary" component="p">
+        Developed by: <a href='https://github.com/mahisaajy' target={"_blank"}>@mahisaajy</a>
+      </Typography>
+      {/* <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
             Something here to give the footer a purpose!
             </Typography> */}
-          {/* <Copyright /> */}
-      </footer>
+      {/* <Copyright /> */}
+    </footer>
   )
 }
 

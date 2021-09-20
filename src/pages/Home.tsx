@@ -122,7 +122,7 @@ export default function Home() {
                             Pengelola Data Handal
                         </Typography>
                         <Typography variant="h6" color="textSecondary" paragraph>
-                            untuk Informasi MKG Terpercaya
+                            untuk Informasi MKG Yang Cepat, Tepat, dan Akurat
                         </Typography>
                         <Button variant="contained" color="primary">
                             Lihat Agenda
