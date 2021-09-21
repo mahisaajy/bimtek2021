@@ -135,7 +135,7 @@ export default function Materi() {
 
                 <Container maxWidth="lg">
                     <Typography variant="h4" gutterBottom>
-                        Materi
+                        Halaman materi diupdate setelah narasumber menyampaikan paparannya
                     </Typography>
                     <Grid container spacing={3}>
                         <Grid item xs={12} sm={4} md={4}>
