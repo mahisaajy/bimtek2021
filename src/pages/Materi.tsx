@@ -128,14 +128,14 @@ export default function Materi() {
                 <Typography component="h1" variant="h4" align="center" color="textPrimary" gutterBottom>
                     Materi Bimtek
                 </Typography>
-                <Typography variant="subtitle1" color="textSecondary" align="center">Belum ada materi yang diunggah</Typography>
+                <Typography variant="subtitle1" color="textSecondary" align="center">Halaman materi diupdate setelah narasumber menyampaikan paparannya</Typography>
             </Container>
             
             <Container maxWidth="lg">
 
                 <Container maxWidth="lg">
                     <Typography variant="h4" gutterBottom>
-                        Halaman materi diupdate setelah narasumber menyampaikan paparannya
+                        Materi
                     </Typography>
                     <Grid container spacing={3}>
                         <Grid item xs={12} sm={4} md={4}>
