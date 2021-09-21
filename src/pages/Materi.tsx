@@ -131,7 +131,7 @@ export default function Materi() {
                 <Typography variant="subtitle1" color="textSecondary" align="center">Belum ada materi yang diunggah</Typography>
             </Container>
             
-            {/* <Container maxWidth="lg">
+            <Container maxWidth="lg">
 
                 <Container maxWidth="lg">
                     <Typography variant="h4" gutterBottom>
@@ -139,12 +139,13 @@ export default function Materi() {
                     </Typography>
                     <Grid container spacing={3}>
                         <Grid item xs={12} sm={4} md={4}>
-                            <CustomCard title={'Pengarahan Bimbingan Teknis Pengelola Database 2020'} description={'Muhammad Sadly - Plt. Deputi Bidang Instrumentasi, Kalibrasi, Rekayasa dan Jaringan Komunikasi'} imagemedia={'pemateri-pltdi.jpg'} linkto={'https://drive.google.com/file/d/1w02gswly7Kq6cdvatGsAqLqYBp04TBSQ/view?usp=sharing'} />
+                            <CustomCard title={'Konsep Integrasi Satu Data MKG Nasional'} description={'Widada Sulistya - Widyaiswara Utama'} imagemedia={'pemateri-pltdi.jpg'} linkto={'https://drive.google.com/file/d/1wdy_fj-29ycg6j-iuAjab62WRDDdoJjo/view?usp=sharing'} />
                         </Grid>
+                        
                         <Grid item xs={12} sm={4} md={4}>
-                            <CustomCard title={'Pembekalan Bimbingan Teknis Online Pengelola Database 2020'} description={'Edward Trihadi - Kepala Pusat Database'} imagemedia={'agenda2.jpg'} linkto={'https://drive.google.com/file/d/1L68HLwRtoW6mcQcwq57458kGuzY7W9S0/view?usp=sharing'} />
+                            <CustomCard title={'Data Cuaca Sebagai Verifikasi InaNWP'} description={'Donaldi S Permana - Tim InaNWP'} imagemedia={'agenda2.jpg'} linkto={'https://drive.google.com/file/d/1HBfVKW4fJoDh3Db2F7_GwHyNkk3Xg_-1/view?usp=sharing'} />
                         </Grid>
-                        <Grid item xs={12} sm={4} md={4}>
+                        {/* <Grid item xs={12} sm={4} md={4}>
                             <CustomCard title={'Pengantar OOP (One Observation Policy)'} description={'Sunaryo - Kepala Bidang Pemeliharaan Database'} imagemedia={'agenda2.jpg'} linkto={'https://drive.google.com/file/d/1Tz15HMiMleOHr8JFgiDpS6anxwUY4fY_/view?usp=sharing'} />
                         </Grid>
                         <Grid item xs={12} sm={4} md={4}>
@@ -175,7 +176,7 @@ export default function Materi() {
 
                         <Grid item xs={12} sm={4} md={4}>
                             <CustomCard title={'Implementasi Metode QC Data Cuaca dan Iklim'} description={'Feizal Amri Permana - Kepala Sub Bidang Manajemen Database MKG'} imagemedia={'coding.jpg'} linkto={'https://drive.google.com/file/d/19-3RJZNd8ep-aP2qWorUPno6URBmQZKC/view?usp=sharing'} />
-                        </Grid>
+                        </Grid> */}
 
 
 
@@ -184,7 +185,7 @@ export default function Materi() {
                     </Grid>
                 </Container>
 
-                <Box mt={8} />
+                {/* <Box mt={8} />
 
                 <Container maxWidth="lg">
                     <Typography variant="h4" gutterBottom>
@@ -201,10 +202,13 @@ export default function Materi() {
                             <CustomCard title={'Abbyy FineReader'} description={'ABBYY FineReader is an optical character recognition (OCR) application developed by ABBYY. The program allows the conversion of image documents (photos, scans, PDF files) into editable electronic formats. In particular, Microsoft Word, Microsoft Excel, Microsoft PowerPoint, Rich Text Format, HTML, PDF/A, searchable PDF, CSV and txt (plain text) files. Starting with version 11 files can be saved in the DjVu format. Version 15 supports recognition of text in 192 languages and has a built-in spell check for 48 of them. There are more than 20 million users of ABBYY FineReader worldwide. Based on FineReader optical character recognition, ABBYY licenses the technology to several companies such as Fujitsu, Panasonic, Xerox, Samsung and others.'} imagemedia={'lup.jpg'} linkto={'https://drive.google.com/drive/folders/1PiJyHzVo0wRt3hfRm7Q1AD4XpNt0fysG?usp=sharing'} />
                         </Grid>
                     </Grid>
-                </Container>
+                </Container> */}
 
 
-            </Container> */}
+                <Box mt={8} />
+
+
+            </Container>
         </>
     );
 }
