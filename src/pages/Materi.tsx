@@ -130,30 +130,59 @@ export default function Materi() {
                 </Typography>
                 <Typography variant="subtitle1" color="textSecondary" align="center">Halaman materi diupdate setelah narasumber menyampaikan paparannya</Typography>
             </Container>
-            
+
             <Container maxWidth="lg">
 
                 <Container maxWidth="lg">
                     <Typography variant="h4" gutterBottom>
-                        Materi
+                        Materi Hari ke-1
                     </Typography>
                     <Grid container spacing={3}>
                         <Grid item xs={12} sm={4} md={4}>
                             <CustomCard title={'Konsep Integrasi Satu Data MKG Nasional'} description={'Widada Sulistya - Widyaiswara Utama'} imagemedia={'pemateri-pltdi.jpg'} linkto={'https://drive.google.com/file/d/1wdy_fj-29ycg6j-iuAjab62WRDDdoJjo/view?usp=sharing'} />
                         </Grid>
-                        
+
                         <Grid item xs={12} sm={4} md={4}>
                             <CustomCard title={'Data Cuaca Sebagai Verifikasi InaNWP'} description={'Donaldi S Permana - Tim InaNWP'} imagemedia={'agenda2.jpg'} linkto={'https://drive.google.com/file/d/1HBfVKW4fJoDh3Db2F7_GwHyNkk3Xg_-1/view?usp=sharing'} />
                         </Grid>
-                        
+
                         <Grid item xs={12} sm={4} md={4}>
                             <CustomCard title={'Persiapan Pembuatan Normal Iklim 1990 - 2020'} description={'Robi Muharsyah - Pusat Informasi Perubahan Iklim'} imagemedia={'agenda2.jpg'} linkto={'https://drive.google.com/file/d/18hJ6LueCV7agqLCJsxeJTeKczfqF63R1/view?usp=sharing'} />
                         </Grid>
-                        
+
                         <Grid item xs={12} sm={4} md={4}>
                             <CustomCard title={'Sosialisasi Implementasi Perka Nomor 4/2016	'} description={'Joko Budi Utomo - Pusat Informasi Perubahan Iklim'} imagemedia={'agenda2.jpg'} linkto={'https://drive.google.com/file/d/1A_G34oPoHY0iUBTBa0uoPGwJ14SePTcF/view?usp=sharing'} />
                         </Grid>
-                        {/* <Grid item xs={12} sm={4} md={4}>
+                    </Grid>
+
+                    <Box mt={8}>
+                    <Typography variant="h4" gutterBottom>
+                        Materi Hari ke-2
+                    </Typography>
+                    </Box>
+                    <Grid container spacing={3}>
+                        <Grid item xs={12} sm={4} md={4}>
+                            <CustomCard title={'Gambaran Umum Kuantitas dan Kualitas Data MKG'} description={'Tri Nurmayati - Sub Koordinator Bidang Manajemen Database MKG'} imagemedia={'coding.jpg'} linkto={'https://drive.google.com/file/d/1Fc0kQqcI3C9znKwl2bRsGoLvdxTjdU0m/view?usp=sharing'} />
+                        </Grid>
+                        <Grid item xs={12} sm={4} md={4}>
+                            <CustomCard title={'Metadata Stasiun (Nimos)'} description={'Putri Juanita Wahab - Pusat Database'} imagemedia={'coding.jpg'} linkto={'https://drive.google.com/file/d/1lNZLT1bk-PMQ8lIcCsLU6ke7KCHhEr08/view?usp=sharing'} />
+                        </Grid>
+                        <Grid item xs={12} sm={4} md={4}>
+                            <CustomCard title={'Ketersediaan Data (sinta.bmkg.go.id)'} description={'Mahisa Ajy Kusuma - Pusat Database'} imagemedia={'coding.jpg'} linkto={'https://drive.google.com/file/d/1bTFWDtoGrxtFJOFBT19Dr1f7bR7P_DNp/view?usp=sharing'} />
+                        </Grid>
+                        <Grid item xs={12} sm={4} md={4}>
+                            <CustomCard title={'Akses dan Menu-menu BMKGSoft'} description={'Setyo Aji Pramono - Pusat Informasi Perubahan Iklim'} imagemedia={'coding.jpg'} linkto={'https://drive.google.com/file/d/1j5L9RMXSN3mtDNWtf1edvSoa9y1MCGJ4/view?usp=sharing'} />
+                        </Grid>
+                        <Grid item xs={12} sm={4} md={4}>
+                            <CustomCard title={'Pembacaan Pias Hillman'} description={'Dana Purwoko - Pusat Informasi Perubahan Iklim'} imagemedia={'coding.jpg'} linkto={'https://drive.google.com/file/d/1R5MC2XseY_55LTds5BK5ipPxVsVePJu0/view?usp=sharing'} />
+                        </Grid>
+                        <Grid item xs={12} sm={4} md={4}>
+                            <CustomCard title={'Penggunaan Tools Stripchart'} description={'M.D.N. Ayu Bima - Pusat Database'} imagemedia={'coding.jpg'} linkto={'https://drive.google.com/drive/folders/1i7rE72SueyiDy9wTEJkLgeWy2KS-msCn?usp=sharing'} />
+                        </Grid>
+                    </Grid>
+
+
+                    {/* <Grid item xs={12} sm={4} md={4}>
                             <CustomCard title={'Sosialisasi QM, QA, dan QC Data Cuaca dan Iklim'} description={'Urip Haryoko - Perekayasa Utama (Puslitbang)'} imagemedia={'agenda2.jpg'} linkto={'https://drive.google.com/file/d/1vIkAPiEeps03cJzGPL_n9c947U6XmKfS/view?usp=sharing'} />
                         </Grid>
 
@@ -186,11 +215,11 @@ export default function Materi() {
 
 
 
-                        
-                    </Grid>
-                </Container>
 
-                {/* <Box mt={8} />
+                
+            </Container>
+
+            {/* <Box mt={8} />
 
                 <Container maxWidth="lg">
                     <Typography variant="h4" gutterBottom>
@@ -210,10 +239,10 @@ export default function Materi() {
                 </Container> */}
 
 
-                <Box mt={8} />
+            <Box mt={8} />
 
 
-            </Container>
+        </Container>
         </>
     );
 }
