@@ -139,6 +139,9 @@ export default function Materi() {
                     </Typography>
                     <Grid container spacing={3}>
                         <Grid item xs={12} sm={4} md={4}>
+                            <CustomCard title={'Pembelakan Bimbingan Teknis Pengelola Database 2021'} description={'Edward Trihadi - Kepala Pusat Database'} imagemedia={'pemateri-pltdi.jpg'} linkto={'https://drive.google.com/file/d/1Ch9xNGFtYRrB2e5ym0E0s7k0CrNXPgRn/view?usp=sharing'} />
+                        </Grid>
+                        <Grid item xs={12} sm={4} md={4}>
                             <CustomCard title={'Konsep Integrasi Satu Data MKG Nasional'} description={'Widada Sulistya - Widyaiswara Utama'} imagemedia={'pemateri-pltdi.jpg'} linkto={'https://drive.google.com/file/d/1wdy_fj-29ycg6j-iuAjab62WRDDdoJjo/view?usp=sharing'} />
                         </Grid>
 
