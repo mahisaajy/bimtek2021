@@ -193,9 +193,9 @@ export default function Materi() {
                         <Grid item xs={12} sm={4} md={4}>
                             <CustomCard title={'Implementasi QC Data Cuaca dan Iklim'} description={'Heru Tribuwono - PMG Ahli Madya Pusat Database'} imagemedia={'coding.jpg'} linkto={'https://drive.google.com/file/d/16pC_Lv0u6oq7Msy9iexf_eszOFqpB0la/view?usp=sharing'} />
                         </Grid>
-                        {/* <Grid item xs={12} sm={4} md={4}>
-                            <CustomCard title={'Pembenahan Data Hardcopy di UPT'} description={'Joko Wigianto - Sub Koordinator Manajemen Database Umum'} imagemedia={'coding.jpg'} linkto={'#'} />
-                        </Grid> */}
+                        <Grid item xs={12} sm={4} md={4}>
+                            <CustomCard title={'Pembenahan Data Hardcopy di UPT'} description={'Joko Wigianto - Sub Koordinator Manajemen Database Umum'} imagemedia={'coding.jpg'} linkto={'https://drive.google.com/file/d/1B8CTsvpMdCIw-0bkT_8TpggHzxnZ1OYf/view?usp=sharing'} />
+                        </Grid>
                         <Grid item xs={12} sm={4} md={4}>
                             <CustomCard title={'Perkembangan Pembenahan Data MKG'} description={'Join Wan Chanlyn - Pusat Database'} imagemedia={'coding.jpg'} linkto={'https://drive.google.com/file/d/13ozfZa77Mq5FCRHSd7vEsbNrFgmLNSr5/view?usp=sharing'} />
                         </Grid>                        
