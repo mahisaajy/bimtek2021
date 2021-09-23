@@ -184,6 +184,23 @@ export default function Materi() {
                         </Grid>
                     </Grid>
 
+                    <Box mt={8}>
+                    <Typography variant="h4" gutterBottom>
+                        Materi Hari ke-3
+                    </Typography>
+                    </Box>
+                    <Grid container spacing={3}>
+                        <Grid item xs={12} sm={4} md={4}>
+                            <CustomCard title={'Implementasi QC Data Cuaca dan Iklim'} description={'Heru Tribuwono - PMG Ahli Madya Pusat Database'} imagemedia={'coding.jpg'} linkto={'https://drive.google.com/file/d/16pC_Lv0u6oq7Msy9iexf_eszOFqpB0la/view?usp=sharing'} />
+                        </Grid>
+                        {/* <Grid item xs={12} sm={4} md={4}>
+                            <CustomCard title={'Pembenahan Data Hardcopy di UPT'} description={'Joko Wigianto - Sub Koordinator Manajemen Database Umum'} imagemedia={'coding.jpg'} linkto={'#'} />
+                        </Grid> */}
+                        <Grid item xs={12} sm={4} md={4}>
+                            <CustomCard title={'Perkembangan Pembenahan Data MKG'} description={'Join Wan Chanlyn - Pusat Database'} imagemedia={'coding.jpg'} linkto={'https://drive.google.com/file/d/13ozfZa77Mq5FCRHSd7vEsbNrFgmLNSr5/view?usp=sharing'} />
+                        </Grid>                        
+                    </Grid>
+
 
                     {/* <Grid item xs={12} sm={4} md={4}>
                             <CustomCard title={'Sosialisasi QM, QA, dan QC Data Cuaca dan Iklim'} description={'Urip Haryoko - Perekayasa Utama (Puslitbang)'} imagemedia={'agenda2.jpg'} linkto={'https://drive.google.com/file/d/1vIkAPiEeps03cJzGPL_n9c947U6XmKfS/view?usp=sharing'} />
